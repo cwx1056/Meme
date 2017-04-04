@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3202D5F21E9444CB00A08D85 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3202D5F11E9444CB00A08D85 /* Meme.swift */; };
 		3216D9FC1E94331D00A18277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216D9FB1E94331D00A18277 /* AppDelegate.swift */; };
 		3216D9FE1E94331D00A18277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216D9FD1E94331D00A18277 /* ViewController.swift */; };
 		3216DA011E94331D00A18277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3216D9FF1E94331D00A18277 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3202D5F11E9444CB00A08D85 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		3216D9F81E94331D00A18277 /* Meme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3216D9FB1E94331D00A18277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3216D9FD1E94331D00A18277 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3202D5F01E94449A00A08D85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3202D5F11E9444CB00A08D85 /* Meme.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3216D9EF1E94331D00A18277 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		3216D9FA1E94331D00A18277 /* Meme */ = {
 			isa = PBXGroup;
 			children = (
+				3202D5F01E94449A00A08D85 /* Model */,
 				3216D9FB1E94331D00A18277 /* AppDelegate.swift */,
 				3216D9FD1E94331D00A18277 /* ViewController.swift */,
 				3216D9FF1E94331D00A18277 /* Main.storyboard */,
@@ -136,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3202D5F21E9444CB00A08D85 /* Meme.swift in Sources */,
 				3216D9FE1E94331D00A18277 /* ViewController.swift in Sources */,
 				3216D9FC1E94331D00A18277 /* AppDelegate.swift in Sources */,
 			);
@@ -303,6 +315,7 @@
 				3216DA0C1E94331D00A18277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
