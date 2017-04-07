@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     }
     
     @objc fileprivate func keyboardWillShow(_ notification: Notification) {
-        view.frame.origin.y = 0 - getKeyboardHeight(notification)
+        view.frame.origin.y -= getKeyboardHeight(notification)
     }
     
     @objc fileprivate func keyboardWillHide(_ notification: Notification) {
