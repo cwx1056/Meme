@@ -79,7 +79,15 @@ class ViewController: UIViewController {
     }
     
     @objc fileprivate func keyboardWillShow(_ notification: Notification) {
-        view.frame.origin.y = 0 - getKeyboardHeight(notification)
+        let textField = (topTextField.isFirstResponder ? topTextField : bottomTextField)!
+        let textFieldHeight = textField.frame.origin.y + textField.frame.height
+        let keyboardY = view.frame.height - getKeyboardHeight(notification)
+        
+        if keyboardY < textFieldHeight {
+            let offset = textFieldHeight - keyboardY + 10
+            view.frame.origin.y = -offset
+        }
+        
     }
     
     @objc fileprivate func keyboardWillHide(_ notification: Notification) {
@@ -96,10 +104,12 @@ class ViewController: UIViewController {
     
     fileprivate func setupTextField(_ textField: UITextField) {
         let memeTextAttributes: [String: Any] = [NSStrokeColorAttributeName: UIColor.black,
+                                                 NSStrokeWidthAttributeName: -2.0,
                                                  NSForegroundColorAttributeName: UIColor.white,
-                                                 NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-                                                 NSStrokeWidthAttributeName: 2.0]
+                                                 NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!]
         textField.defaultTextAttributes = memeTextAttributes
+        textField.autocapitalizationType = .allCharacters
+        textField.textAlignment = .center
         textField.delegate = self
     }
     

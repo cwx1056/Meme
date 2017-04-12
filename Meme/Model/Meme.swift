@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Meme: NSObject {
+struct Meme {
 
     // MARK: -
     // MARK: Properties
@@ -26,8 +26,6 @@ class Meme: NSObject {
         self.bottomText = bottomText
         self.originalImage = originalImage
         self.memedImage = memedImage
-        
-        super.init()
     }
     
 }
