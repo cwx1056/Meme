@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  Meme
 //
 //  Created by Tech Netaround on 4/4/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MemeEditorViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
@@ -53,13 +53,15 @@ class ViewController: UIViewController {
         activityViewController.completionWithItemsHandler = { activeType, completed, returnedItems, activityError in
             if completed {
                 self.save(with: memedImage)
+                self.dismiss(animated: true, completion: nil)
             }
         }
         
         present(activityViewController, animated: true, completion: nil)
     }
     
-    @IBAction func deleteMemedImage(_ sender: Any) {
+    @IBAction func dismissEditorViewController(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func pickAnImage(_ sender: Any) {
@@ -125,7 +127,6 @@ class ViewController: UIViewController {
     
     fileprivate func configureUI() {
         shareButtonItem.isEnabled = imageView.image != nil
-        cancelButtonItem.isEnabled = false
         cameraButtonItem.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
     
@@ -165,10 +166,12 @@ class ViewController: UIViewController {
                         bottomText: bottomTextField.text!,
                         originalImage: imageView.image!,
                         memedImage: memedImage)
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        appDelegate.memes.append(meme)
     }
 }
 
-extension ViewController:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension MemeEditorViewController:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -185,7 +188,7 @@ extension ViewController:  UIImagePickerControllerDelegate, UINavigationControll
     
 }
 
-extension ViewController: UITextFieldDelegate {
+extension MemeEditorViewController: UITextFieldDelegate {
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
