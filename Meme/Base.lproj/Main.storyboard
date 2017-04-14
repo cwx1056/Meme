@@ -63,14 +63,14 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ZWj-ur-DIw"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="natural" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="QNr-Gv-QPr">
-                                <rect key="frame" x="154" y="139" width="67" height="48"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QNr-Gv-QPr">
+                                <rect key="frame" x="16" y="139" width="343" height="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="natural" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-Ma-iyA">
-                                <rect key="frame" x="118" y="509" width="139" height="48"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-Ma-iyA">
+                                <rect key="frame" x="16" y="509" width="343" height="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -81,13 +81,17 @@
                             <constraint firstItem="pSM-ex-vSG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="19q-W7-aZl"/>
                             <constraint firstItem="pSM-ex-vSG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4IG-O9-GSb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h9x-Ma-iyA" secondAttribute="bottom" constant="110" id="B6U-Ol-Spc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="h9x-Ma-iyA" secondAttribute="leading" id="CvT-sq-96B"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="QNr-Gv-QPr" secondAttribute="leading" id="EME-4u-Lhe"/>
                             <constraint firstItem="IHM-FJ-BWh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="EaW-6t-yd9"/>
                             <constraint firstAttribute="trailing" secondItem="pSM-ex-vSG" secondAttribute="trailing" id="JNl-9j-VPY"/>
                             <constraint firstItem="h9x-Ma-iyA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jw0-Ip-VLx"/>
                             <constraint firstItem="IHM-FJ-BWh" firstAttribute="top" secondItem="pSM-ex-vSG" secondAttribute="bottom" id="KnP-xe-Mf5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IHM-FJ-BWh" secondAttribute="trailing" constant="-16" id="RoT-bK-Znr"/>
                             <constraint firstItem="QNr-Gv-QPr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TaU-Br-9Vb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QNr-Gv-QPr" secondAttribute="trailing" id="W2M-eZ-Kro"/>
                             <constraint firstItem="QNr-Gv-QPr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="YxV-3J-0mP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h9x-Ma-iyA" secondAttribute="trailing" id="gTG-Xt-r4A"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IHM-FJ-BWh" secondAttribute="bottom" id="ze7-IR-uT2"/>
                         </constraints>
                     </view>
@@ -115,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="-291"/>
+            <point key="canvasLocation" x="2228" y="-291.00449775112446"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zCp-yz-Gfm">
@@ -187,8 +191,8 @@
                                                 <constraint firstAttribute="width" secondItem="DQZ-kG-b7X" secondAttribute="height" multiplier="1:1" id="RiA-RI-MHh"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-aj-nPs">
-                                            <rect key="frame" x="136" y="46" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-aj-nPs">
+                                            <rect key="frame" x="136" y="46" width="231" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -197,6 +201,7 @@
                                     <constraints>
                                         <constraint firstItem="DQZ-kG-b7X" firstAttribute="leading" secondItem="WrP-0L-aj3" secondAttribute="leadingMargin" constant="-8" id="6VS-5z-7cv"/>
                                         <constraint firstItem="DQZ-kG-b7X" firstAttribute="top" secondItem="WrP-0L-aj3" secondAttribute="topMargin" constant="-16" id="J6y-Ca-SOQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6Cw-aj-nPs" secondAttribute="trailing" id="lha-Y6-agN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="DQZ-kG-b7X" secondAttribute="bottom" constant="-14.5" id="lqY-pG-7wt"/>
                                         <constraint firstItem="6Cw-aj-nPs" firstAttribute="leading" secondItem="DQZ-kG-b7X" secondAttribute="trailing" constant="8" id="oLt-bz-Lvb"/>
                                         <constraint firstItem="6Cw-aj-nPs" firstAttribute="centerY" secondItem="DQZ-kG-b7X" secondAttribute="centerY" id="zdf-aB-Cmw"/>
